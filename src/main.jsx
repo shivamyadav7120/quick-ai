@@ -1,10 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { Routes, Route } from 'react-router-dom';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import Home from './pages/Home';
+import Layout from './pages/Layout';
+import Dashboard from './pages/Dashboard';
+import WriteArticles from './pages/WriteArticles';
+import BlogTitles from './pages/BlogTitles';
+
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/ai" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="write-articles" element={<WriteArticles />} />
+        <Route path="blog-titles" element={<BlogTitles />} />
+      </Route>
+    </Routes>
+  );
+};
+
+export default App;
