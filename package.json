@@ -1,0 +1,27 @@
+{
+  "name": "quick.ai",
+  "version": "1.0.0",
+  "description": "chat gpt clone",
+  "license": "MIT",
+  "author": "shivam yadav",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.1.1",
+    "body-parser": "^2.3.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.0",
+    "morgan": "^1.11.0",
+    "nodemon": "^3.1.14"
+  }
+}
